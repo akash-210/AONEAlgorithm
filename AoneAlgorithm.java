@@ -1,13 +1,12 @@
 import java.util.HashMap;
-import java.util.HashSet;
-
-public class AoneAlgorithm {
+//akash
+public class AoneAlgorithm extends TextSample {
 
 	public static void main(String... arrays) { 
-		String find="akash";
+		String find="dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
 		long start=System.currentTimeMillis();
-		System.out.println(findAllStringFromParagraphGEN2(find,"my name is akash aakash"));
-		System.out.println(start-System.currentTimeMillis());
+		System.out.println(findAllStringFromParagraphGEN2(find,txtsample));
+		System.out.println(System.currentTimeMillis()-start+" Millis");
 	}
 	// it is to find for long char in fast phase if "name" is to find it will check
 	// first char(0)
@@ -20,7 +19,6 @@ public class AoneAlgorithm {
 		for (Character character : charArray) {
 			toFindInChar.put(character, y++);
 		}
-		int originalLength = toFind.length();
 		int findarraylength = toFind.length() - 1;
 		int paragraphLength = paragraph.length();
 		int found = 0;
