@@ -19,7 +19,9 @@ public class SCSAlgorithm extends TextSample {
 		char[] charArray = toFind.toCharArray();
 		HashMap<Character, Integer> toFindInChar = new HashMap<>();
 		int y = 0;
-		for (Character character : charArray) {
+		for (Character character : charArray) {//it will override duplicate key with last duplicate key;
+			//example akash => aksh
+			//        01234    2134
 			toFindInChar.put(character, y++);
 		}
 		int findarraylength = toFind.length() - 1;
