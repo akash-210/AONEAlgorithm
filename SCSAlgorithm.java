@@ -1,5 +1,8 @@
 import java.util.HashMap;
-//akash
+/**
+ *
+ * @author Akash
+ */
 public class SCSAlgorithm extends TextSample {
 
 	public static void main(String... arrays) { 
@@ -47,3 +50,15 @@ public class SCSAlgorithm extends TextSample {
 		return found;
 	}
 }
+
+/*
+ Line no:45
+ If a character is not present in the map, it returns false;
+ in that case, I do not set i + findarraylength+1 . 
+ The logic can be setting full search string length 
+ to i to skip some character without missing any element {ex: "name" length=4 }
+ but  We usually set i = i + findarraylength; {ex: "name" length-1 =3 } 
+ because since the for loop by default increases one value at a time, 
+ we typically get length=4 which is the same length of search element .
+ [ example "name" as string to search{which is search element} in paragraph "my name is akash" ].
+*/
