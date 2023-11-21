@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class SCSAlgorithm  extends TextSample   {
 
 	public static void main(String... arrays) { 
-		    String find = "dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
+		String find = "dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
 	        long start = System.currentTimeMillis();
 	        System.out.println(startSCS(find, txtsample));
 	        System.out.println(System.currentTimeMillis() - start+" Millis");
