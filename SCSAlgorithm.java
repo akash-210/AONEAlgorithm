@@ -1,5 +1,8 @@
 import java.util.HashMap;
-//akash//SkippedCharacterSearch
+/**
+ *
+ * @author Akash
+ */
 public class SCSAlgorithm  extends TextSample   {
 
 	public static void main(String... arrays) { 
