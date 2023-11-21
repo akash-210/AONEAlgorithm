@@ -31,7 +31,7 @@ public class SCSAlgorithm  extends TextSample   {
 				if (j == findCharLen) {
 					count++;
 					j = 0;
-					++i;
+					i = i + findLength;
 					pass=true;
 				} else if (i - ln > 0 && pass) {
 					i = i - ln ;
