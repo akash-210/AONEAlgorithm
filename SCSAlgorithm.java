@@ -8,14 +8,14 @@ public class SCSAlgorithm extends TextSample {
 	public static void main(String... arrays) { 
 		String find="dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
 		long start=System.currentTimeMillis();
-		System.out.println(findAllStringFromParagraphGEN2(find,txtsample));
+		System.out.println(startSCS(find,txtsample));
 		System.out.println(System.currentTimeMillis()-start+" Millis");
 	}
 	// it is to find for long char in fast phase if "name" is to find it will check
 	// first char(0)
 	// if not it will add i+name.lenth skipppping its between because
 
-	private static int findAllStringFromParagraphGEN2(String toFind, String paragraph) {
+	private static int startSCS(String toFind, String paragraph) {
 		char[] charArray = toFind.toCharArray();
 		HashMap<Character, Integer> toFindInChar = new HashMap<>();
 		int y = 0;
