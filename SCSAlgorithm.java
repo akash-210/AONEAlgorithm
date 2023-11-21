@@ -26,7 +26,7 @@ public class SCSAlgorithm extends TextSample {
 		int paragraphLength = paragraph.length();
 		int found = 0;
 		int j = 0;
-		boolean pass=true;;
+		boolean pass=true;
 		for (int i = 0; i < paragraphLength; i++) {
 			Integer lm = 0;
 			if ((lm = toFindInChar.get(paragraph.charAt(i))) != null) {
