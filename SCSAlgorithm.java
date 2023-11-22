@@ -3,13 +3,13 @@ import java.util.HashMap;
  *
  * @author Akash
  */
-public class SCSAlgorithm  extends TextSample   {
+public class SCSAlgorithm   extends TextSample  {
 
 	public static void main(String... arrays) { 
-		String find = "dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
-	        long start = System.currentTimeMillis();
-	        System.out.println(startSCS(find, txtsample));
-	        System.out.println(System.currentTimeMillis() - start+" Millis");
+		String find="akashvismynamewhatisyournametellmeyourname";
+		long start=System.currentTimeMillis();
+		System.out.println(startSCS(find,readFile("largetxt.txt")));
+	    System.out.println(System.currentTimeMillis() - start+" Millis");
 	}
 	
 	private static int startSCS(String toFind, String paragraph) {
@@ -27,14 +27,18 @@ public class SCSAlgorithm  extends TextSample   {
 		int count = 0;
 		for (int i = 0; i < paragraphLength;) {
 			Integer ln = 0;
-			if ((ln = charMap.get(paragraph.charAt(i))) != null) {
+			if ( pass && (ln = charMap.get(paragraph.charAt(i))) != null || paragraph.charAt(i)==charArray[j]) {
 				if (j == findCharLen) {
 					count++;
 					j = 0;
 					i = i + findLength;
 					pass=true;
-				} else if (i - ln > 0 && pass) {
-					i = i - ln ;
+				} else if (pass) {
+					if(i - ln > 0 ) {
+						i = i - ln ;
+					}else {
+						i =0 ;
+					}
 					pass=false;
 				}else {
 					j++;
