@@ -3,7 +3,7 @@ import java.util.HashMap;
  *
  * @author Akash
  */
-public class SCSAlgorithm   extends TextSample  {
+public class SCSAlgorithm  extends TextSample  {
 
 	public static void main(String... arrays) { 
 		String find="dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
