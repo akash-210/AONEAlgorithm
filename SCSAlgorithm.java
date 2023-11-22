@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class SCSAlgorithm   extends TextSample  {
 
 	public static void main(String... arrays) { 
-		String find="akashvismynamewhatisyournametellmeyourname";
+		String find="dXDQ5TgeH8liyxqwEQeDsbfY7Khe0TXhb9ZY9kHmyYYyLRLqN5";
 		long start=System.currentTimeMillis();
 		System.out.println(startSCS(find,readFile("largetxt.txt")));
 	    System.out.println(System.currentTimeMillis() - start+" Millis");
@@ -19,33 +19,33 @@ public class SCSAlgorithm   extends TextSample  {
 		for (Character character : charArray) {
 			charMap.put(character, y++);
 		}
-		int findLength = toFind.length();
-		int findCharLen = toFind.length()-1;
-		int paragraphLength = paragraph.length();
+		int toFindLen = toFind.length();
+		int toFindCharLen = toFindLen-1;
+		int paraLen = paragraph.length();
 		boolean pass=true;
 		int j = 0;
 		int count = 0;
-		for (int i = 0; i < paragraphLength;) {
+		for (int i = 0; i < paraLen;) {
 			Integer ln = 0;
 			if ( pass && (ln = charMap.get(paragraph.charAt(i))) != null || paragraph.charAt(i)==charArray[j]) {
-				if (j == findCharLen) {
+				if (j == toFindCharLen) {
 					count++;
 					j = 0;
-					i = i + findLength;
+					i += toFindLen;
 					pass=true;
 				} else if (pass) {
 					if(i - ln > 0 ) {
-						i = i - ln ;
+						i -= ln ;
 					}else {
 						i =0 ;
 					}
 					pass=false;
 				}else {
 					j++;
-					++i;
+					i++;
 				}
 			} else {
-				i = i + findLength;
+				i += toFindLen;
 				j = 0;
 				pass=true;
 			}
